@@ -37,4 +37,4 @@ def load_config(path: str):
         tg_bot=TelegramBot(
             token=tg_bot["token"],
         ),
-        genshin=GenshinAPI(**config["genshin_services"]))
+        genshin=GenshinAPI(**config["genshin"]))
