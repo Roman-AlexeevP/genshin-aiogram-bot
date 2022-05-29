@@ -8,8 +8,17 @@ class TelegramBot:
 
 
 @dataclass
+class GenshinAPI:
+    ltuid: str
+    ltoken: str
+    login: str
+    password: str
+
+
+@dataclass
 class Config:
     tg_bot: TelegramBot
+    genshin: GenshinAPI
 
 
 def cast_bool(value: str) -> bool:
@@ -27,4 +36,5 @@ def load_config(path: str):
     return Config(
         tg_bot=TelegramBot(
             token=tg_bot["token"],
-        ))
+        ),
+        genshin=GenshinAPI(**config["genshin"]))
