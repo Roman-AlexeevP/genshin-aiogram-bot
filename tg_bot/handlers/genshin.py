@@ -12,4 +12,4 @@ logger = logging.getLogger(__name__)
 def register_genshin(dp: Dispatcher):
     # dp.register_message_handler()
     # register commands here
-    logger.info("genshin handlers registered commands successfuly")
+    logger.info("genshin_services handlers registered commands successfuly")
